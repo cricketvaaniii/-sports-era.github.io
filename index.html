@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>India vs West Indies — Live</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:#f4f4f4;
+  background:
+    radial-gradient(circle at 85% 10%,rgba(48,120,35,.28),transparent 30%),
+    linear-gradient(135deg,#07120d,#102116 50%,#07100b);
+  min-height:100vh;
+}
+.container{max-width:900px;margin:auto;padding:22px 16px 45px}
+.card{
+  border:1px solid rgba(216,157,43,.45);
+  border-radius:16px;
+  background:rgba(8,24,15,.82);
+  box-shadow:0 10px 35px rgba(0,0,0,.35);
+  overflow:hidden;
+}
+.hero{
+  min-height:230px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:32px;
+  background:
+    linear-gradient(90deg,rgba(5,14,9,.96),rgba(5,14,9,.48)),
+    radial-gradient(circle at 80% 50%,#385b2d,transparent 38%);
+}
+.hero h1{font-size:38px;line-height:1.08;margin:0 0 14px;letter-spacing:1px}
+.hero p{margin:0;color:#b9c2bb;font-size:15px;letter-spacing:2px}
+.live{
+  border:1px solid #e1a63d;
+  background:#111b15;
+  border-radius:10px;
+  padding:15px 18px;
+  font-weight:700;
+  white-space:nowrap;
+}
+.dot{display:inline-block;width:10px;height:10px;background:#e74c3c;border-radius:50%;margin-right:8px}
+.join{padding:26px}
+.join h2{margin:0 0 8px;font-size:25px}
+.join p{color:#aeb8b1;line-height:1.6}
+.btn{
+  display:block;
+  width:100%;
+  padding:17px 20px;
+  border-radius:10px;
+  border:0;
+  text-align:center;
+  text-decoration:none;
+  font-size:18px;
+  font-weight:700;
+  cursor:pointer;
+  margin-top:15px;
+}
+.primary{background:linear-gradient(90deg,#ffb53e,#ff7c17);color:#111}
+.secondary{background:transparent;color:#eee;border:1px solid #a67a29}
+.player{
+  margin:0 26px 26px;
+  height:420px;
+  background:#000;
+  border:1px solid rgba(216,157,43,.35);
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#69716c;
+}
+.player span{text-align:center}
+.section{margin-top:22px;padding:24px}
+.section h3{margin:0 0 14px;font-size:20px;letter-spacing:1px}
+.share{background:linear-gradient(90deg,#ffb53e,#ff7c17);color:#111}
+.note{font-size:13px;color:#8f9a93;text-align:center;margin-top:22px;line-height:1.5}
+@media(max-width:600px){
+  .container{padding:12px}
+  .hero{min-height:190px;padding:23px;gap:15px}
+  .hero h1{font-size:28px}
+  .hero p{font-size:12px}
+  .live{font-size:12px;padding:11px}
+  .join,.section{padding:20px}
+  .player{margin:0 20px 20px;height:300px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="card hero">
+    <div>
+      <h1>INDIA VS WEST<br>INDIES</h1>
+      <p>SPORTS LIVE STREAMS &amp; UPDATES</p>
+    </div>
+    <div class="live"><span class="dot"></span>LIVE NOW</div>
+  </div>
+
+  <div class="card join">
+    <h2>Join The Action</h2>
+    <p>Get instant updates, match highlights, and exclusive links on our official Telegram channel.</p>
+    <a class="btn primary" href="https://t.me/cricketvaaniiii" target="_blank" rel="noopener">
+      ✈️ Join Channel Now
+    </a>
+    <a class="btn secondary" href="https://t.me/cricketvaaniiii" target="_blank" rel="noopener">
+      I've Already Joined
+    </a>
+  </div>
+
+  <div class="card player">
+    <span>LIVE STREAM PLAYER</span>
+  </div>
+
+  <div class="card section">
+    <h3>✈️ FOLLOW US FOR MORE UPDATES</h3>
+    <a class="btn primary" href="https://t.me/cricketvaaniiii" target="_blank" rel="noopener">
+      ✈️ Join Telegram
+    </a>
+  </div>
+
+  <div class="card section">
+    <h3>↗ SHARE STREAM</h3>
+    <button class="btn share" onclick="sharePage()">Share this page link</button>
+  </div>
+
+  <div class="note">
+    © 2026 Sports Era • Live updates and channel links
+  </div>
+</div>
+
+<script>
+function sharePage(){
+  if(navigator.share){
+    navigator.share({
+      title:document.title,
+      text:"India vs West Indies — Live",
+      url:window.location.href
+    });
+  }else{
+    navigator.clipboard.writeText(window.location.href);
+    alert("Page link copied!");
+  }
+}
+</script>
+</body>
+</html>
